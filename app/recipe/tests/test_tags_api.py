@@ -38,7 +38,6 @@ class PublicTagsApiTest(TestCase):
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
-
 class PrivateTagsApiTest(TestCase):
     """Test authenticated API requests."""
 
