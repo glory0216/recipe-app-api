@@ -98,3 +98,12 @@ class PrivateIngredientsApiTests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_204_NO_CONTENT)
         ingredients = Ingredient.objects.filter(user=self.user)
         self.assertFalse(ingredients.exists())
+
+    # def test_filtered_ingredients_unique(self):
+    #     """Test filtered ingredients returns a unique list"""
+    #     ing = Ingredient.objects.create(user=self.user, name='Eggs')
+    #     Ingredient.objects.create(user=self.user, name='Lentils')
+    #     recipe1 = Recipe.objects.create(
+    #         user=self.user,
+    #         title='Eggs '
+    #     )
